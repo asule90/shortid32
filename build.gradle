@@ -19,7 +19,7 @@ task sourceJar(type: Jar) {
     classifier = 'sources'
 }
 
-/*publishing {
+publishing {
     publications {
         mavenJava(MavenPublication) {  // Artifacts to publish
             from components.java
@@ -30,11 +30,11 @@ task sourceJar(type: Jar) {
             version '1.0.0'
         }
     }
-}*/
+}
 
-/*bintray {
-    user = System.getenv("BINTRAY_USER") ?: project.bintrayUser
-    key = System.getenv("BINTRAY_KEY") ?: project.bintrayKey
+bintray {
+    user = System.getenv("BINTRAY_USER")
+    key = System.getenv("BINTRAY_KEY")
 
     publications = ['mavenJava']
 
@@ -53,7 +53,7 @@ task sourceJar(type: Jar) {
     }
 
     override = rootProject.version.endsWith("SNAPSHOT")
-}*/
+}
 
 dependencies {
     //testCompile group: 'junit', name: 'junit', version: '4.11'
