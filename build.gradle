@@ -6,8 +6,8 @@ apply plugin: 'java'
 apply plugin: "maven-publish"
 
 sourceCompatibility = 1.8
-group 'me.nimavat'
-version '1.0.1.RC1'
+group 'com.asepsulaeman'
+version '1.0.0'
 
 repositories {
     mavenLocal()
@@ -19,20 +19,20 @@ task sourceJar(type: Jar) {
     classifier = 'sources'
 }
 
-publishing {
+/*publishing {
     publications {
         mavenJava(MavenPublication) {  // Artifacts to publish
             from components.java
             artifact sourceJar
 
-            groupId 'me.nimavat'
-            artifactId 'shortid'
-            version '1.0.1.RC1'
+            groupId 'com.asepsulaeman'
+            artifactId 'shortid32'
+            version '1.0.0'
         }
     }
-}
+}*/
 
-bintray {
+/*bintray {
     user = System.getenv("BINTRAY_USER") ?: project.bintrayUser
     key = System.getenv("BINTRAY_KEY") ?: project.bintrayKey
 
@@ -40,20 +40,20 @@ bintray {
 
     pkg {
         repo = 'maven'
-        name = 'shortid'
+        name = 'shortid32'
         desc = 'Short id generator. Url-friendly. Non-predictable. Cluster-compatible.'
         licenses = ['Apache-2.0']
         publicDownloadNumbers = true
 
-        githubRepo = "snimavat/shortid"
+        githubRepo = "asule90/shortid32"
         githubReleaseNotesFile = 'README.md'
-        vcsUrl = 'https://github.com/snimavat/shortid'
-        issueTrackerUrl = 'https://github.com/snimavat/shortid/issues'
+        vcsUrl = 'https://github.com/asule90/shortid32'
+        issueTrackerUrl = 'https://github.com/asule90/shortid32/issues'
 
     }
 
     override = rootProject.version.endsWith("SNAPSHOT")
-}
+}*/
 
 dependencies {
     //testCompile group: 'junit', name: 'junit', version: '4.11'

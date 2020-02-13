@@ -1,7 +1,5 @@
 
-Java port of the short id -- https://github.com/dylang/shortid
-
-See [shortid](https://github.com/dylang/shortid) for documentation.
+32chars version of [shortid](https://github.com/dylang/shortid)
 
 ### How to use
 
@@ -9,21 +7,21 @@ Gradle
 ```groovy
 repositories {
     maven {
-        url  "http://dl.bintray.com/snimavat/maven" 
+        url  "http://dl.bintray.com/asule/maven" 
     }
 }
 
 dependencies {
-	compile "me.nimavat:shortid:1.0.1.RC1"
+	compile "com.asepsulaeman.shortid32:1.0.0"
 }
 
 
 ```
 
 ```java
-    import me.nimavat.shortid.ShortId
+    import com.asepsulaeman.shortid32;
     
-    System.out.println(Shortid.generate())
+    System.out.println(Shortid.generate());
 
 ```
 

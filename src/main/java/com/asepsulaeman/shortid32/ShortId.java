@@ -1,9 +1,10 @@
-package me.nimavat.shortid;
+package com.asepsulaeman.shortid32;
 
 public class ShortId {
 
 	private static final int version = 6;
-	private static final Long REDUCE_TIME = 1459707606518L;
+	// private static final Long REDUCE_TIME = 1459707606518L;
+	private static final Long REDUCE_TIME = 1459523698783L;
 	private static int clusterWorkerId = 0;
 
 	private static int counter;

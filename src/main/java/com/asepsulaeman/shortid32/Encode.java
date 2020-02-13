@@ -1,4 +1,4 @@
-package me.nimavat.shortid;
+package com.asepsulaeman.shortid32;
 
 import java.util.function.Function;
 
@@ -23,7 +23,7 @@ class Encode {
 	}
 
 	static int randomByte() {
-		return ((int)Math.floor(Math.random() * 256)) & 0x30;
+		return ((int)Math.floor(Math.random() * 256)) & 0x10;
 	}
 
 }

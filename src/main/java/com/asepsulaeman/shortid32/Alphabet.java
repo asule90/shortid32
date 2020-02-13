@@ -1,4 +1,4 @@
-package me.nimavat.shortid;
+package com.asepsulaeman.shortid32;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 class Alphabet {
-	private static final String ORIGINAL = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-";
+	private static final String ORIGINAL = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
 
 	static long seed = 1;
 	private static final Random random = new Random(seed);
@@ -33,7 +33,7 @@ class Alphabet {
 
 
 		if (_alphabet_.length() != ORIGINAL.length()) {
-			throw new RuntimeException("Custom alphabet for shortid must be " + ORIGINAL.length() + " unique characters. You submitted " + _alphabet_.length() + " characters: " + _alphabet_);
+			throw new RuntimeException("Custom alphabet for shortid32 must be " + ORIGINAL.length() + " unique characters. You submitted " + _alphabet_.length() + " characters: " + _alphabet_);
 		}
 
 		List<String> characters = Arrays.asList(_alphabet_.split(""));
@@ -41,7 +41,7 @@ class Alphabet {
 
 
 		if (duplicates.size() > 0) {
-			throw new RuntimeException("Custom alphabet for shortid must be " + ORIGINAL.length() + " unique characters. These characters were not unique: " + duplicates.stream().collect(Collectors.joining(", ")));
+			throw new RuntimeException("Custom alphabet for shortid32 must be " + ORIGINAL.length() + " unique characters. These characters were not unique: " + duplicates.stream().collect(Collectors.joining(", ")));
 		}
 
 		alphabet = _alphabet_;

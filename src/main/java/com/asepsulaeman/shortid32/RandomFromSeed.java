@@ -1,4 +1,4 @@
-package me.nimavat.shortid;
+package com.asepsulaeman.shortid32;
 
 class RandomFromSeed {
 
